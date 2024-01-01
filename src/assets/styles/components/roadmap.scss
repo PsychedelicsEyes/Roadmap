@@ -38,12 +38,13 @@
     justify-content: center;
     align-items: center;
     gap: 300px;
+    overflow: hidden;
 
-    @media screen  and (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
       flex-direction: column;
       gap: 50px;
     }
-    
+
     .progress-con {
       margin: 70px 0;
       display: flex;
@@ -95,16 +96,25 @@
           top: -20px;
           left: 50px;
           min-width: 200px;
-          max-width: 300px;
+          max-width: 250px;
 
           .title {
             margin: 5px 0;
-            font-size: 1.8em;
+            font-size: 1.7em;
+            text-transform: uppercase;
+            @media screen and (max-width: 400px) {
+              max-width: 140px;
+              overflow-wrap: break-word;
+            }
           }
 
           .description {
             font-style: italic;
             color: $accent-color;
+
+            @media screen and (max-width: 400px) {
+              max-width: 140px;
+            }
           }
         }
       }
