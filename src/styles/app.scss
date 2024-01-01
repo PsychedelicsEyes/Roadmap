@@ -23,13 +23,11 @@ body {
     border-radius: 10px;
 }
 
-
 *::-webkit-scrollbar-thumb {
     background: $secondary-background-color;
     border-radius: 10px;
 }
 
-/* Handle on hover */
 *::-webkit-scrollbar-thumb:hover {
     background: $tiertary-background-color;
 }

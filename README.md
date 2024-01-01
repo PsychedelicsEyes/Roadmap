@@ -8,14 +8,16 @@ npm i
 ```
 
 ## ⚙️Settings
->You can custom the roadmap in ./src/assets/components/roadmap.jsx
+>You can custom the roadmap in ./src/App.js
+>You can also add more roadmap. (2,3 maximum)
 ```
-  const TotalProgress = 0;
-  const roadmapSteps = [
+  const roadSteps = [
     { title: "Step 1 Title", description: "Description for Step 1" },
     { title: "Step 2 Title", description: "Description for Step 2" },
     { title: "Step 3 Title", description: "Description for Step 3" },
   ];
+
+  <Roadmap name="roadname" roadmapSteps={roadSteps} totalProgress={0} />
 ```
 >
 >You can create your theme color in  ./src/assets/styles/data/theme.scss.

@@ -1,4 +1,4 @@
-.roadmap {
+.App {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,63 +32,80 @@
     }
   }
 
-  .progress-con {
-    margin: 70px 0;
+  .roadmap-con {
+    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 300px;
 
-    .bar-con {
-      position: relative;
+    @media screen  and (max-width: 1000px) {
+      flex-direction: column;
+      gap: 50px;
+    }
+    
+    .progress-con {
+      margin: 70px 0;
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      width: 30px;
-      height: 500px;
-      border-radius: 1em;
-      background-color: transparent;
-      border: 8px solid $secondary-background-color;
+      align-items: center;
 
-      .bar {
-        height: 100%;
-        width: 100%;
+      .roadname {
+        margin: 25px 0;
+        font-size: 1.5em;
+        text-transform: uppercase;
+      }
+
+      .bar-con {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 30px;
+        height: 500px;
         border-radius: 1em;
-        background-color: $accent-color;
-        transition: height 2s ease-in-out;
-
-     
-      }
-
-      .circle {
-        position: absolute;
-        top: -25px;
-        z-index: 2;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background-color: $primary-background-color;
+        background-color: transparent;
         border: 8px solid $secondary-background-color;
-        
-        &.active {
+
+        .bar {
+          height: 100%;
+          width: 100%;
+          border-radius: 1em;
           background-color: $accent-color;
-        }
-      }
-
-      .text {
-        position: absolute;
-        top: -20px;
-        left: 50px;
-        min-width: 200px;
-        max-width: 300px;
-
-        .title {
-          margin: 5px 0;
-          font-size: 1.8em;
+          transition: height 2s ease-in-out;
         }
 
-        .description {
-          font-style: italic;
-          color: $accent-color;
+        .circle {
+          position: absolute;
+          top: -25px;
+          z-index: 2;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-color: $primary-background-color;
+          border: 8px solid $secondary-background-color;
+
+          &.active {
+            background-color: $accent-color;
+          }
+        }
+
+        .text {
+          position: absolute;
+          top: -20px;
+          left: 50px;
+          min-width: 200px;
+          max-width: 300px;
+
+          .title {
+            margin: 5px 0;
+            font-size: 1.8em;
+          }
+
+          .description {
+            font-style: italic;
+            color: $accent-color;
+          }
         }
       }
     }
